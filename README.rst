@@ -21,27 +21,22 @@ simply call the *tagbox* method on an empty element on the page:
 Options
 ~~~~~~~
 
-In order for the **tagbox** to work properly, the only mandatory parameter is *taglist* which specifies the list of the available tag choices to show.
+In order for the **tagbox** to work properly, the only mandatory parameter is ``taglist`` which specifies the list of available tag choices to show.
 
-+------------------+----------+-------------------------+--------------------------------------------------+
-| Name             | Type     | Default                 | Description                                      |
-+==================+==========+=========================+==================================================+
-| taglist          | list     | empty                   | List of optional tag choices                     |
-+------------------+----------+-------------------------+--------------------------------------------------+
-| selectedlist     | list     | empty                   | List of preselected tags                         |
-+------------------+----------+-------------------------+--------------------------------------------------+
-| cols             | int      | 5                       | Number of columns in the choices matrix          |
-+------------------+----------+-------------------------+--------------------------------------------------+
-| expand           | boolean  | false                   | Expand choices matrix on intialization           |
-+------------------+----------+-------------------------+--------------------------------------------------+
-| matrixlabel      | html     | *see example*           | The caption of the link that shows the matrix    |
-+------------------+----------+-------------------------+--------------------------------------------------+
-| matrixaltlabel   | html     | *see example*           | The caption of the link that hides the matrix    |
-+------------------+----------+-------------------------+--------------------------------------------------+
-| maxtags          | int      | 0 (unlimited)           | Maximum number of selected tags                  |
-+------------------+----------+-------------------------+--------------------------------------------------+
-| placeholder      | string   | 'Select one or more...' | The placeholder for the manual input field       |
-+------------------+----------+-------------------------+--------------------------------------------------+
+.. csv-table::
+   :header: "Event", "Type", "Default", "Description"
+   :widths: 20, 10, 40, 70
+
+   "*taglist*",      "list",   "empty", "List of optional tag choices"
+   "*selectedlist*", "list",   "empty", "List of preselected tags"
+   "*cols*",         "int",     5,      "Number of columns in the choices matrix"
+   "*expand*",       "boolean", false,  "Expand choices matrix on initialization"
+   "*matrixlabel*",  "html",    *see example*, "The caption of the link that shows the matrix"
+   "*matrixaltlabel*",  "html",    *see example*, "The caption of the link that hides the matrix"
+   "*maxtags*",       "int", 0 (unlimited),  "Maximum number of selected tags"
+   "*placeholder*", "string", 'Select one or more...', "The placeholder for the manual input field"
+
+.. note:: When the choices matrix is open, the autocomplete suggestions box is automatically turned off.
 
 Example
 ~~~~~~~
@@ -56,20 +51,19 @@ Example
 
 
 
-`DEMO <http://leandigo.com/tagbox/>`__ http://leandigo.com/tagbox/
+`DEMO <http://leandigo.com/tagbox/>`_
 
 Events
 ------
 
 *tagbox* exposes two events for hooking into the plugin functionality upon tag addition to and removal from the selected tags list.
 
-+------------------+-----------------------------------------------------------------+
-| Event            | Description                                                     |
-+==================+=================================================================+
-| tagAdded         | Triggered when a tag is added to the selected tags list         |
-+------------------+-----------------------------------------------------------------+
-| tagRemoved       | Triggered when a tag is removed from the selected tags list     |
-+------------------+-----------------------------------------------------------------+
+.. csv-table::
+   :header: "Event", "Description"
+   :widths: 15, 70
+
+   "*tagAdded*", "Triggered when a tag is added to the selected tags list"
+   "*tagRemoved*", "Triggered when a tag is removed from the selected tags list"
 
 Example
 ~~~~~~~
@@ -82,9 +76,9 @@ Example
 Keyboard Bindings
 -----------------
 
-* When the autocomplete suggestions box is shown you can use the Up and Down arrow keys on the keyboard to navigate between the choices that match the string you've entered.
+* When the autocomplete suggestions box is shown you can use the Up and Down arrow keys on the keyboard to navigate between the choices
+* When the choices matrix is shown, you can use the Up and Down arrow keys to navigate between the choices that match the string you've entered
 * You can use Backspace to delete already selected tags, when your cursor is focused on the input field.
-
 
 License
 -------
