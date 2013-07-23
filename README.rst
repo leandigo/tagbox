@@ -24,17 +24,17 @@ Options
 In order for the **tagbox** to work properly, the only mandatory parameter is ``taglist`` which specifies the list of available tag choices to show.
 
 .. csv-table::
-   :header: "Event", "Type", "Default", "Description"
+   :header: "Name", "Type", "Default", "Description"
    :widths: 20, 10, 40, 70
 
-   "*taglist*",      "list",   "empty", "List of optional tag choices"
-   "*selectedlist*", "list",   "empty", "List of preselected tags"
-   "*cols*",         "int",     5,      "Number of columns in the choices matrix"
-   "*expand*",       "boolean", false,  "Expand choices matrix on initialization"
-   "*matrixlabel*",  "html",    *see example*, "The caption of the link that shows the matrix"
-   "*matrixaltlabel*",  "html",    *see example*, "The caption of the link that hides the matrix"
-   "*maxtags*",       "int", 0 (unlimited),  "Maximum number of selected tags"
-   "*placeholder*", "string", 'Select one or more...', "The placeholder for the manual input field"
+   "taglist",      "list",   "empty", "List of optional tag choices"
+   "selectedlis", "list",   "empty", "List of preselected tags"
+   "cols",         "int",     5,      "Number of columns in the choices matrix"
+   "expand",       "boolean", false,  "Expand choices matrix on initialization"
+   "matrixlabel",  "html",    *see example*, "The caption of the link that shows the matrix"
+   "matrixaltlabel",  "html",    *see example*, "The caption of the link that hides the matrix"
+   "maxtags",       "int", 0 (unlimited),  "Maximum number of selected tags"
+   "placeholder", "string", 'Select one or more...', "The placeholder for the manual input field"
 
 .. note:: When the choices matrix is open, the autocomplete suggestions box is automatically turned off.
 
@@ -56,14 +56,14 @@ Example
 Events
 ------
 
-*tagbox* exposes two events for hooking into the plugin functionality upon tag addition to and removal from the selected tags list.
+*tagbox* exposes two events for hooking into the plugin functionality on tag addition and removal from the selected tags list.
 
 .. csv-table::
    :header: "Event", "Description"
    :widths: 15, 70
 
-   "*tagAdded*", "Triggered when a tag is added to the selected tags list"
-   "*tagRemoved*", "Triggered when a tag is removed from the selected tags list"
+   "tagAdded", "Triggered when a tag is added to the selected tags list"
+   "tagRemoved", "Triggered when a tag is removed from the selected tags list"
 
 Example
 ~~~~~~~
@@ -72,6 +72,16 @@ Example
     $('#tagbox-container').on('tagAdded', function() {
         // Do something...
     });
+
+
+Data
+----
+
+You can access the currently selected tags list at anytime by querying the ``data`` property of the ``.tagbox`` element.
+::
+
+    $('.tagbox').data('selected');
+
 
 Keyboard Bindings
 -----------------
