@@ -51,7 +51,7 @@ Example
 
 
 
-`DEMO <http://leandigo.com/tagbox/>`_
+`DEMO <http://leandigo.github.io/tagbox/>`_
 
 Events
 ------
@@ -72,8 +72,6 @@ Example
     $('#tagbox-container').on('tagAdded', function() {
         // Do something...
     });
-
-`DEMO <http://leandigo.github.io/tagbox/>`_
 
 Data
 ----
