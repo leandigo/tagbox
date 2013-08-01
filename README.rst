@@ -73,6 +73,7 @@ Example
         // Do something...
     });
 
+`DEMO <http://leandigo.github.io/tagbox/>`_
 
 Data
 ----
