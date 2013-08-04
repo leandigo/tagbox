@@ -97,3 +97,7 @@ Released under the MIT License. See the LICENSE file for details.
 
 .. |leandigo| replace:: www.leandigo.com
 .. _leandigo: http://www.leandigo.com
+
+.. figure:: https://cruel-carlota.pagodabox.com/5be962a5950f388bc92f9a93888c8bc3
+   :alt: Githalytics
+   :target: http://githalytics.com/leandigo/tagbox
